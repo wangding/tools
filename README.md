@@ -20,15 +20,15 @@
    |-- ......  
    |-- pull.sh        // 这是自动同步脚本    
 
-2. 在 git bash 中，在 x-dir 目录下，运行命令  
+2. 在 git bash 中，在 x-dir 目录下，运行下面的命令，来设置该脚本的运行权限  
 
-  ```Bash
-  chmod +x pull.sh   // 设置该脚本运行权限 
+  ```sh
+  chmod +x pull.sh
   ```
 
-3. 拉取更新的时候，请在 x-dir 目录下，运行命令  
+3. 拉取更新的时候，请在 x-dir 目录下，运行下面的命令，来执行脚本  
 
-  ```bash
-  ./pull.sh
+  ```sh
+  ./pull.sh 
   ```
 
