@@ -22,13 +22,13 @@
 
 2. 在 git bash 中，在 x-dir 目录下，运行命令  
 
-  ```bash
-     chmod +x pull.sh   // 设置该脚本运行权限 
+  ```Bash
+  chmod +x pull.sh   // 设置该脚本运行权限 
   ```
 
 3. 拉取更新的时候，请在 x-dir 目录下，运行命令  
 
   ```bash
-     ./pull.sh
+  ./pull.sh
   ```
 
