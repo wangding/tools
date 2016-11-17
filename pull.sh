@@ -10,6 +10,7 @@ do
     then
         dir=${curDir}/${file}
 	echo $file
+	echo ===================
 	cd $dir
 	git pull
 	echo
