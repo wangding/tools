@@ -12,7 +12,7 @@ do
 	echo $file
 	echo ================
 	cd $dir
-	git status
+	git status -sb
 	echo
     fi
 done
