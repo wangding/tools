@@ -6,7 +6,7 @@
 	ad = add .
 	st = status -sb
 [user]
-	name = 王顶
+	name = wangding
 	email = 408542507@qq.com
 [push]
 	default = simple
