@@ -10,5 +10,7 @@
 	email = 408542507@qq.com
 [push]
 	default = simple
-[core]
-	safecrlf = false
+[color]
+	diff = auto
+	status = auto
+	branch = auto
