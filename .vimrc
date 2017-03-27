@@ -23,6 +23,10 @@ noremap <leader>j <c-w>j
 noremap <leader>k <c-w>k
 noremap <leader>h <c-w>h
 noremap <leader>l <c-w>l
+noremap <leader>d <c-d>
+noremap <leader>u <c-u>
+noremap <leader>f <c-f>
+noremap <leader>b <c-b>
 
 map j gj
 map k gk
