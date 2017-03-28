@@ -27,6 +27,10 @@ noremap <leader>d <c-d>
 noremap <leader>u <c-u>
 noremap <leader>f <c-f>
 noremap <leader>b <c-b>
+noremap <leader>o <c-o>
+noremap <leader>i <c-i>
+noremap <leader>e <c-e>
+noremap <leader>y <c-y>
 
 map j gj
 map k gk
