@@ -50,3 +50,5 @@ noremap <leader>y <c-y>
 map j gj
 map k gk
 
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
