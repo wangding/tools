@@ -14,7 +14,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " YouCompleteMe 插件的配置
-nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nmap <leader>gf :YcmCompleter GoToDefinition<CR>
 
 
 set number
@@ -34,28 +34,35 @@ set nobackup
 set nowb
 set noswapfile
 
-nnoremap <CR> G
-nnoremap <BS> gg
+nmap <CR> G
+nmap <BS> gg
 
 let mapleader=" "
-nnoremap <leader>w :w!<cr>
-noremap <leader>j <c-w>j
-noremap <leader>k <c-w>k
-noremap <leader>h <c-w>h
-noremap <leader>l <c-w>l
-noremap <leader>d <c-d>
-noremap <leader>u <c-u>
-noremap <leader>f <c-f>
-noremap <leader>b <c-b>
-noremap <leader>o <c-o>
-noremap <leader>i <c-i>
-noremap <leader>e <c-e>
-noremap <leader>y <c-y>
-noremap <leader>a <c-a>
-noremap <leader>v <c-v>
+nmap <leader>w :w!<cr>
+nmap <leader>j <c-w>j
+nmap <leader>k <c-w>k
+nmap <leader>h <c-w>h
+nmap <leader>l <c-w>l
+nmap <leader>d <c-d>
+nmap <leader>u <c-u>
+nmap <leader>f <c-f>
+nmap <leader>b <c-b>
+nmap <leader>o <c-o>
+nmap <leader>i <c-i>
+nmap <leader>e <c-e>
+nmap <leader>y <c-y>
+nmap <leader>a <c-a>
+nmap <leader>v <c-v>
 
-map j gj
-map k gk
+" 在 C 语言和 JavaScript 中，用 F2 在插入模式下，给代码行尾补充分号
+imap <F2> <ESC>$A;<CR>
+
+" 在插入模式下移动光标，不用方向键，根命令行的体验一致
+imap <c-f> <Right>
+imap <c-b> <Left>
+imap <c-e> <ESC>A
+imap <c-a> <ESC>I
+imap <c-u> <ESC>ddO
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
