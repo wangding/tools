@@ -13,7 +13,12 @@ Plugin 'jiangmiao/auto-pairs'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" YouCompleteMe 插件的配置
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+
+
 set number
+set relativenumber
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -46,6 +51,8 @@ noremap <leader>o <c-o>
 noremap <leader>i <c-i>
 noremap <leader>e <c-e>
 noremap <leader>y <c-y>
+noremap <leader>a <c-a>
+noremap <leader>v <c-v>
 
 map j gj
 map k gk
