@@ -57,12 +57,14 @@ nmap <leader>v <c-v>
 " 在 C 语言和 JavaScript 中，用 F2 在插入模式下，给代码行尾补充分号
 imap <F2> <ESC>$A;<CR>
 
-" 在插入模式下移动光标，不用方向键，根命令行的体验一致
+" 在插入模式下移动光标，不用方向键，跟命令行的体验一致
 imap <c-f> <Right>
 imap <c-b> <Left>
 imap <c-e> <ESC>A
 imap <c-a> <ESC>I
 imap <c-u> <ESC>ddO
+imap <c-j> <Down>
+imap <c-k> <Up>
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
