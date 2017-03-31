@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -16,8 +17,20 @@ filetype plugin indent on    " required
 " YouCompleteMe 插件的配置
 nmap <leader>gf :YcmCompleter GoToDefinition<CR>
 
+" syntastic 插件的配置
+set statusline+=%#warningmsg#
+set statusline+=%#{SyntasticStatuslineFlag()}#
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['jsl', 'jslint']
+let g:syntastic_html_checkers = ['tidy', 'jshint']
 
 set number
+set fdm=indent
 set relativenumber
 set tabstop=2
 set shiftwidth=2
@@ -63,8 +76,9 @@ imap <c-b> <Left>
 imap <c-e> <ESC>A
 imap <c-a> <ESC>I
 imap <c-u> <ESC>ddO
-imap <c-j> <Down>
-imap <c-k> <Up>
+imap <c-w> <ESC>bcw
+imap <c-n> <Down>
+imap <c-p> <Up>
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
