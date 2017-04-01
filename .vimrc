@@ -7,9 +7,12 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ternjs/tern_for_vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-syntastic/syntastic'
+
+" 下面的插件需要编译
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'wincent/command-T'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -66,6 +69,7 @@ nmap <leader>e <c-e>
 nmap <leader>y <c-y>
 nmap <leader>a <c-a>
 nmap <leader>v <c-v>
+nmap <leader>x :q!<cr>
 
 " 在 C 语言和 JavaScript 中，用 F2 在插入模式下，给代码行尾补充分号
 imap <F2> <ESC>$A;<CR>
@@ -81,4 +85,3 @@ imap <c-n> <Down>
 imap <c-p> <Up>
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-
