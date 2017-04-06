@@ -83,5 +83,7 @@ imap <c-u> <ESC>ddO
 imap <c-w> <ESC>bcw
 imap <c-n> <Down>
 imap <c-p> <Up>
+imap <c-k> <ESC>ld$A
+imap <c-d> <ESC>lxi
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
