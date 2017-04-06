@@ -1,16 +1,18 @@
 [alias]
-        co = checkout
+  co = checkout
 	ci = commit
 	hi = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	br = branch -v
 	ad = add .
 	st = status -sb
 [user]
-	name = wangding
+	name  = wangding
 	email = 408542507@qq.com
 [push]
 	default = simple
 [color]
-	diff = auto
+	diff   = auto
 	status = auto
 	branch = auto
+[core]
+	editor = vim
