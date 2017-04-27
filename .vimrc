@@ -81,8 +81,8 @@ imap <c-e> <ESC>A
 imap <c-a> <ESC>I
 imap <c-u> <ESC>ddO
 imap <c-w> <ESC>bcw
-imap <c-n> <Down>
-imap <c-p> <Up>
+imap <c-n> <ESC>gji
+imap <c-p> <ESC>gki
 imap <c-k> <ESC>ld$A
 imap <c-d> <ESC>lxi
 
