@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'mattn/emmet-vim'
 
 " 下面的插件需要编译
 Plugin 'Valloric/YouCompleteMe'
