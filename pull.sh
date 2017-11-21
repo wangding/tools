@@ -12,6 +12,7 @@ do
 	echo $file
 	echo ===================
 	cd $dir
+  git checkout master
 	git pull
 	echo
     fi
