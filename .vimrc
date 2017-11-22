@@ -20,6 +20,7 @@ filetype plugin indent on    " required
 
 " YouCompleteMe 插件的配置
 nmap <leader>gf :YcmCompleter GoToDefinition<CR>
+let g:ycm_semantic_triggers = {'css': [ 're!^\s{4}', 're!:\s+' ]}
 
 " syntastic 插件的配置
 set statusline+=%#warningmsg#
@@ -92,8 +93,8 @@ imap <c-e> <ESC>A
 imap <c-a> <ESC>I
 imap <c-u> <ESC>ddO
 imap <c-w> <ESC>bcw
-imap <c-n> <ESC>gji
-imap <c-p> <ESC>gki
+imap <c-n> <Down>
+imap <c-p> <Up>
 imap <c-k> <ESC>ld$A
 imap <c-d> <ESC>lxi
 
