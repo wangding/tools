@@ -98,4 +98,8 @@ imap <c-p> <Up>
 imap <c-k> <ESC>ld$A
 imap <c-d> <ESC>lxi
 
+" 在快选模式下，把选中的 HTML 代码变成模板字符串
+vmap <silent> ;h :s?^\(\s*\)+'\([^']\+\)',*\s*$?\1\2?g<CR>
+vmap <silent> ;q :s?^\(\s*\)\(.*\)\s*$? \1 + '\2'?<CR>
+
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
