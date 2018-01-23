@@ -34,8 +34,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['jsl', 'jshint']
-let g:syntastic_html_checkers = ['tidy', 'jshint']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_html_checkers = ['htmlhint']
+let g:syntastic_css_checkers = ['csslint']
 
 set number                  " 显示行号
 set fdm=indent              " 启动代码折叠，如果不希望代码折叠，可以把这一行删除
