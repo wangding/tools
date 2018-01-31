@@ -51,7 +51,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm osx vundle node)
+plugins=(git yum npm osx vundle node)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,3 +83,5 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias lrd="browser-sync start --server --port 8080 --no-open --files ."
+alias pl="sudo firewall-cmd --zone=public --list-ports"
