@@ -12,6 +12,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'mattn/emmet-vim'
 Plugin 'heavenshell/vim-jsdoc'
 Plugin 'vimcn/vimcdoc'
+Plugin 'tpope/vim-unimpaired'
 
 " 下面的插件需要编译
 Plugin 'Valloric/YouCompleteMe'
@@ -37,6 +38,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_html_checkers = ['htmlhint']
 let g:syntastic_css_checkers = ['csslint']
+let g:syntastic_loc_list_height = 5
 
 set number                  " 显示行号
 set fdm=indent              " 启动代码折叠，如果不希望代码折叠，可以把这一行删除
@@ -49,12 +51,14 @@ set history=1000
 set mouse=a
 set autoindent
 set autoread
+set autowrite
 set ruler
 set ignorecase
 set incsearch
 set nobackup
 set nowb
 set noswapfile
+colorscheme torte
 
 " 回车键到文档末尾，退格键到文档开头
 nmap <CR> G
@@ -101,8 +105,9 @@ imap <c-p> <Up>
 imap <c-k> <ESC>ld$A
 imap <c-d> <ESC>lxi
 
-" 在快选模式下，把选中的 HTML 代码变成模板字符串
-vmap <silent> ;h :s?^\(\s*\)+'\([^']\+\)',*\s*$?\1\2?g<CR>
-vmap <silent> ;q :s?^\(\s*\)\(.*\)\s*$? \1 + '\2'?<CR>
+" 在块选模式下，把选中的 HTML 代码变成模板字符串
+vmap <silent> ;m :s?^\(\s*\)+'\([^']\+\)',*\s*$?\1\2?g<CR>
+vmap <silent> ;p :s?^\(\s*\)\(.*\)\s*$? \1 + '\2'?<CR>
+vmap <silent> ;s :s?^\(.*\)$?- \1?<CR>:noh<CR>
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
