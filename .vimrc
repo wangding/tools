@@ -41,7 +41,7 @@ let g:syntastic_css_checkers = ['csslint']
 let g:syntastic_loc_list_height = 5
 
 set number                  " 显示行号
-set fdm=indent              " 启动代码折叠，如果不希望代码折叠，可以把这一行删除
+"set fdm=indent              " 启动代码折叠，如果不希望代码折叠，可以把这一行删除
 set relativenumber          " 使用相对行号，如果不希望使用相对行号，可以把这一行删除 
 set tabstop=2
 set shiftwidth=2
@@ -85,11 +85,10 @@ nmap <leader>a <c-a>
 nmap <leader>v <c-v>
 nmap <leader>x :q!<cr>
 
-" 在 C 语言和 JavaScript 中，用 F2 在插入模式下，给代码行尾补充分号
-imap <F2> <ESC>$A;<CR>
-
-" 在 normal 模式下一键给当前行增加缩进
-nmap <F3> V>
+" 在普通模式下 F2 快速插入今天的日期和星期几
+" F3 快速插入明天的日期和星期几
+nmap <F2> :r!date +"\%Y年\%m月\%d日 \%A"<cr>
+nmap <F3> :r!date -d "+1 day" +"\%Y年\%m月\%d日 \%A"<cr>
 
 " 在插入模式下移动光标，不用方向键，跟命令行的体验一致
 " <c-f> 是 ctrl + f，在插入模式下向右移动光标
