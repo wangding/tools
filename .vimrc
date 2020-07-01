@@ -13,6 +13,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'heavenshell/vim-jsdoc'
 Plugin 'vimcn/vimcdoc'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'preservim/nerdcommenter'
 
 " 下面的插件需要编译
 Plugin 'Valloric/YouCompleteMe'
