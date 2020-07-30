@@ -9,15 +9,17 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'moll/vim-node'
+Plugin 'vim-scripts/vim-auto-save'
 Plugin 'mattn/emmet-vim'
 Plugin 'heavenshell/vim-jsdoc'
+Plugin 'tpope/vim-surround'
 Plugin 'vimcn/vimcdoc'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'preservim/nerdcommenter'
 
 " 下面的插件需要编译
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'wincent/command-T'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -41,8 +43,12 @@ let g:syntastic_html_checkers = ['htmlhint']
 let g:syntastic_css_checkers = ['csslint']
 let g:syntastic_loc_list_height = 5
 
+" auto-save 插件的配置
+let g:auto_save = 0  " enable AutoSave on Vim startup
+let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
+
 set number                  " 显示行号
-"set fdm=indent              " 启动代码折叠，如果不希望代码折叠，可以把这一行删除
+set fdm=indent              " 启动代码折叠，如果不希望代码折叠，可以把这一行删除
 set relativenumber          " 使用相对行号，如果不希望使用相对行号，可以把这一行删除 
 set tabstop=2
 set shiftwidth=2
@@ -51,7 +57,11 @@ set expandtab
 set history=1000
 set mouse=a
 set autoindent
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 set autoread
+set noeb vb t_vb=
+set showcmd
 set autowrite
 set ruler
 set ignorecase
@@ -98,8 +108,6 @@ imap <c-f> <Right>
 imap <c-b> <Left>
 imap <c-e> <ESC>A
 imap <c-a> <ESC>I
-imap <c-u> <ESC>ddO
-imap <c-w> <ESC>bcw
 imap <c-n> <Down>
 imap <c-p> <Up>
 imap <c-k> <ESC>ld$A
