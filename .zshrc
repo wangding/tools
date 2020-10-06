@@ -176,6 +176,6 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 # ignore complition
 zstyle ':completion:*:complete:-command-:*:*' ignored-patterns '*.pdf|*.exe|*.dll'
 
-alias lrd="browser-sync start --server --port 8080 --no-open --files ."
+alias lrd="browser-sync start --server --port 8080 --no-open --files . --ignore node_modules"
 alias pl="sudo firewall-cmd --zone=public --list-ports"
 alias tem="wget http://sample.wangding.in/spa/template.js http://sample.wangding.in/spa/template.css http://sample.wangding.in/spa/template.html"
